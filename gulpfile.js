@@ -1,12 +1,12 @@
 const { src, dest, watch, series } = require("gulp");
-const sass = require("gulp-sass")(require("sass"));
+const pug = require("gulp-pug");
 
-function buildStyles() {
-  return src("abacum/**/*.scss").pipe(sass()).pipe(dest("css"));
+function buildTemplates() {
+  return src("./src/templates/*.pug").pipe(pug()).pipe(dest("./dist"));
 }
 
 function watchTask() {
-  watch(["abacum/**/*.scss"], buildStyles);
+  watch(["./src/*.pug"], buildTemplates);
 }
 
-exports.default = series(buildStyles, watchTask);
+exports.default = series(buildTemplates, watchTask);
