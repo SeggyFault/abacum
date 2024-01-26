@@ -6,7 +6,8 @@
   "scripts": {
     "build:html": "npx pug src/templates/index.pug -o ./dist/",
     "build:css": "npx tailwindcss -i src/styles/main.css -o ./dist/main.css",
-    "watch": "npx tailwindcss -i src/styles/main.css -o ./dist/main.css --watch | npx pug src/templates/index.pug -o ./dist/ --watch"
+    "build": "npm run build:html && npm run build:css",
+    "watch": "npx tailwindcss -i src/styles/main.css -o ./dist/main.css --watch | npx pug src/templates/index.pug -o ./dist/ --watch -P"
   },
   "author": "",
   "license": "ISC",

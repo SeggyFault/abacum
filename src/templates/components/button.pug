@@ -1,10 +1,10 @@
-// Button Primary:
-a(href="#").px-3.py-2.text-sm.text-white.font-bold.bg-blue-300(class="hover:bg-blue-500 focus:bg-blue-300").border.border-blue-300.rounded-lg Request a demo
-
-// Button Secondary:
-a(href="#").px-3.py-2.text-sm.text-blue-300(class="hover:text-blue-500 focus:text-blue-300").font-bold.bg-transparent.border.border-blue-300(class="hover:border-blue-500 focus:border-blue-300").rounded-lg Login
-
-// Button Tertiary:
-a(href="#").px-3.py-3.text-sm.text-black.font-bold.bg-yellow-300(class="hover:bg-yellow-400 focus:bg-yellow-300").border.border-yellow-300.rounded-lg Book a demo
-
-
+mixin button(type, text)
+  if type == 'primary'
+    a(href="#", class="hover:bg-blue-500 focus:bg-blue-300").px-3.py-2.text-sm.text-white.font-bold.bg-blue-300.border.border-blue-300.rounded-lg 
+      | #{text}
+  else if type == 'secondary'
+    a(href="#", class="hover:border-blue-500 focus:border-blue-300 hover:text-blue-500 focus:text-blue-300").px-3.py-2.text-sm.text-blue-300.font-bold.bg-transparent.border.border-blue-300.rounded-lg 
+      | #{text}
+  else if type == 'tertiary'
+    a(href="#", class="hover:bg-yellow-400 focus:bg-yellow-300").px-3.py-3.text-sm.text-black.font-bold.bg-yellow-300.border.border-yellow-300.rounded-lg 
+      | #{text}

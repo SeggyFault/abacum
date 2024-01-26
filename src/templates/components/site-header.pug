@@ -1,13 +1,15 @@
+include ./button.pug
+
 header#header.sticky.top-0.w-full.flex.justify-between
   img(class="logo" src="../src/static/images/logo.svg" alt="abacum logo")
   // [Hidden] Desktop Nav START
   nav.header__nav--desktop
-    ul.header__nav__list.flex 
+    ul.header__nav__list.flex.gap-2
       li.header__nav__item
-        a.header__nav__link.cursor-pointer(href="#") Product 
-          svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6")
+        a(href="#").header__nav__link.flex.items-center.px-4.py-3.gap-1 Product 
+          svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4")
             path(stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5")
-        ul.header__sub-nav__list
+        ul.header__sub-nav__list.hidden
           li.header__sub-nav__item 
             a.header__sub-nav__link.cursor-pointer(href="#") Reporting
           li.header__sub-nav__item 
@@ -19,10 +21,10 @@ header#header.sticky.top-0.w-full.flex.justify-between
       li.header__nav__item
         a.header__nav__link.cursor-pointer(href="#") Plans
       li.header__nav__item
-        a.header__nav__link.cursor-pointer(href="#") Resources
-          svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6")
+        a(href="#").header__nav__link.flex.items-center Resources
+          svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4")
             path(stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5")
-        ul.header__sub-nav__list
+        ul.header__sub-nav__list.hidden
           li.header__sub-nav__item 
             a.header__sub-nav__link.cursor-pointer(href="#") What is FP&A?
           li.header__sub-nav__item 
@@ -34,22 +36,21 @@ header#header.sticky.top-0.w-full.flex.justify-between
           li.header__sub-nav__item 
             a.header__sub-nav__link.cursor-pointer(href="#") Interviews
       li.header__nav__item
-        a.header__nav__link.cursor-pointer(href="#") Company
-          svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6")
+        a(href="#").header__nav__link.flex.items-center Company
+          svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4")
             path(stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5")
-        ul.header__sub-nav__list
+        ul.header__sub-nav__list.hidden
           li.header__sub-nav__item 
             a.header__sub-nav__link.cursor-pointer(href="#") About
           li.header__sub-nav__item 
             a.header__sub-nav__link.cursor-pointer(href="#") Careers
   // [Hidden] Desktop Nav END
   div.btn-group
-    // [Hidden] Desktop Login Btn START
-    a(href="#") Login
+    +button('secondary')
     // [Hidden] Desktop Login Btn END
-    a(href="#") Request a demo
+    +button('primary', 'Ciao')
     // Mobile nav
-    a(href="#")
+    a.hidden(href="#")
       svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6")
         path(stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5")
 
