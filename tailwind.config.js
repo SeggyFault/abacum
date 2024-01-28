@@ -32,6 +32,9 @@ module.exports = {
         100: "#BF434D",
       },
     },
+    fontFamily: {
+      inter: ["Inter", "system-ui", "sans-serif"],
+    },
   },
   plugins: [],
 };
