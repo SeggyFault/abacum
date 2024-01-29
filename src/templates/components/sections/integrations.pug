@@ -1,0 +1,19 @@
+include ../business-system-card.pug
+include ../button.pug
+
+section(class="flex flex-col items-center text-center mx-auto px-[.625rem] py-5 bg-[#ebf8ff]") 
+  div(class="w-full mx-auto mb-12 text-center")
+    h2(class="mb-4 text-2xl") 
+      | Automated FP&A starts with direct integrations
+    p(class="text-base text-neutral-500")
+      | Abacum fits into any workflow and connects with any business critical system your company uses.
+  div(class="grid grid-cols-1 gap-5 w-full sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-10")
+    +card('../src/static/images/salesforce.webp', 'Salesforce')
+    +card('../src/static/images/netsuite.webp', 'Netsuite')
+    +card('../src/static/images/google-sheet.webp', 'Google Sheets')
+    +card('../src/static/images/workday.webp', 'Workday Adaptive')
+    +card('../src/static/images/tableau.webp', 'Tableau')
+    +card('../src/static/images/xero.webp', 'Xero')
+    +card('../src/static/images/snowflake.webp', 'Snowflake')
+    +card('../src/static/images/personio.webp', 'Personio')
+  +button('primary', 'Explore more integrations')
