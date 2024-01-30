@@ -1,10 +1,10 @@
-footer#footer(class="footer py-[3.75rem]")
+footer#footer(class="footer py-[3.75rem] bg-neutral-600 text-neutral-100")
   div(class="footer-container mx-auto max-w-7xl px-[10px] lg:px-10 xl:px-4")
     div(class="flex flex-col justify-between gap-20 lg:flex-row lg:gap-12 xl:gap-24")
       nav(class="footer-nav grid grid-cols-2 gap-10 order-1 md:grid-cols-3 lg:grid-cols-5 lg:gap-24 lg:order-2")
         // Product
         ul(class="product-list flex flex-col gap-4")
-          li Product
+          li(class="font-bold") Product
           li 
             a(href="https://www.abacum.io/product/platform") Platform
           li 
@@ -22,7 +22,7 @@ footer#footer(class="footer py-[3.75rem]")
 
         // Persona
         ul(class="persona-list flex flex-col gap-4")
-          li Persona
+          li(class="font-bold") Persona
           li 
             a(href="https://www.abacum.io/solutions/cfo") CFOs
           li 
@@ -32,7 +32,7 @@ footer#footer(class="footer py-[3.75rem]")
 
         // Industry
         ul(class="industry-list flex flex-col gap-4")
-          li Industry
+          li(class="font-bold") Industry
           li 
             a(href="https://www.abacum.io/solutions/saas") SaaS
           li 
@@ -46,7 +46,7 @@ footer#footer(class="footer py-[3.75rem]")
         
         // Resources
         ul(class="resources-list flex flex-col gap-4")
-          li Resources
+          li(class="font-bold") Resources
           li 
             a(href="https://www.abacum.io/resources/what-is-fpa") What is FP&amp;A
           li 
@@ -64,7 +64,7 @@ footer#footer(class="footer py-[3.75rem]")
 
         // Company
         ul(class="company-list flex flex-col gap-4")
-          li Company
+          li(class="font-bold") Company
           li 
             a(href="https://www.abacum.io/about-us/company") About Us
           li 
@@ -74,15 +74,15 @@ footer#footer(class="footer py-[3.75rem]")
       div(class="footer-info flex flex-col gap-5 order-2 max-w-[256px] lg:gap-10 lg:order-1")
         // Logo
         div(class="footer-logo flex flex-col gap-5")
-          a(href="https://www.abacum.io/")
-            img(src="../src/static/images/logo.svg", alt="abacum logo")
+          a(href="https://www.abacum.io/", class="hover:opacity-75", fill="#fff")
+            img(src="../src/static/images/logo-white.svg", alt="abacum logo", height="24", width="174")
           p
           | FP&amp;A, automated.
           br
           | Time is money, insights too.
         // Social Media
         div(class="social-media")
-          ul(class="flex")
+          ul(class="flex gap-6")
             li
               a(href="https://www.linkedin.com/company/abacum-io")
                 img(src="../src/static/images/linkedin.svg", alt="linkedin icon")
@@ -93,13 +93,13 @@ footer#footer(class="footer py-[3.75rem]")
               a(href="mailto:support@abacum.io?subject=Hey%20Abacum!", target="_blank")
                 img(src="../src/static/images/email.svg", alt="email icon")
         // Awards
-        div(class="awards flex")
+        div(class="awards flex gap-2 mt-6 md:gap-6 md:mt-0 ")
           img(src="../src/static/images/support-fall.svg", alt="best support", width="62", height="80")
           img(src="../src/static/images/leader-fall.svg", alt="leader", width="62", height="80")
           img(src="../src/static/images/easiest-fall.svg", alt="easiest to use", width="62", height="80")
   // Copy
-  div(class="copy mt-10 lg:mt-20")
-      ul(class="flex gap-5")
+  div(class="copy mt-10 lg:mt-20 text-sm")
+      ul(class="flex flex-wrap gap-5 md:justify-center")
         li © 2024 Abacum Inc
         li
           a(href="https://www.abacum.io/privacy-policy") Privacy Policy
