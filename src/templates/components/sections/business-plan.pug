@@ -1,3 +1,4 @@
+include ../card.pug
 section#business-plan
   div(class="container mx-auto max-w-7xl flex flex-col gap-10")
     div(class="max-w-2xl mx-auto")
@@ -6,9 +7,6 @@ section#business-plan
       p
       | Abacum is everything finance teams need to forecast revenue, plan headcount, or budget OPEX. Easily define metrics, change assumptions, and adjust headcount from an intuitive interface.
     div(class="grid grid-cols-1 gap-10 lg:grid-cols-3")
-      article(class="flex flex-col gap-5")
-        img(src="", alt="")
-        h3
-        | Finally, formulas you can understand
-        p
-        | Model your metrics with formulas you can easily understand and trace. Abacum delivers precision and accuracy at scale.
+      +card("business-plan", "../src/static/images/image.webp", "Finally, formulas you can understand", "Model your metrics with formulas you can easily understand and trace. Abacum delivers precision and accuracy at scale.")
+      +card("business-plan", "../src/static/images/image-1.webp", "Always have a what-if answer", "Compare different plans and outcomes and decide the best strategies to hit your ambitious goals.")
+      +card("business-plan", "../src/static/images/image-2-1.webp", "Have full control over any change", "With permissions and traceability never lose control over who made an edit.")

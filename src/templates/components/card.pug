@@ -1,0 +1,8 @@
+mixin card(type, link, heading, text)
+  if type == "business-plan"    
+    article(class="flex flex-col gap-5")
+        img(src=link, alt="", class="rounded-lg")
+        h3
+        | #{heading}
+        p
+        | #{text}
