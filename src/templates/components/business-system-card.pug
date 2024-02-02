@@ -1,6 +1,4 @@
-mixin card(link, text, type)
-  div(class="flex items-center rounded-lg bg-neutral-100 p-5")
-    img(src=link, class="mr-4 object-contain object-left", heigh="56px", width="56px")
-    span(class="text-base")
-    | #{text}
-  
+mixin card(link, text, classes)
+  div(class=`flex items-center rounded-lg bg-neutral-100 p-5 md:max-w-[20rem] ${classes}`)
+    img(src=link, class="mr-4 object-contain object-left", height="56px", width="56px")
+    span(class="text-base") #{text}
