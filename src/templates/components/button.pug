@@ -3,8 +3,8 @@ mixin button(type, text, classes)
     a(href="#", class=`w-full hover:bg-blue-500 focus:bg-blue-300 md:w-fit block px-3 py-2 text-sm text-center text-neutral-100 font-bold bg-blue-300 border border-blue-300 rounded-lg ${classes}`)
       | #{text}
   else if type == 'secondary'
-    a(href="#", class="hover:border-blue-500 focus:border-blue-300 hover:text-blue-500 focus:text-blue-300 block px-3 py-2 text-sm text-center text-blue-300 font-bold bg-transparent border border-blue-300 rounded-lg") 
+    a(href="#", class="block px-3 py-2 text-sm font-bold text-center text-blue-300 bg-transparent border border-blue-300 rounded-lg hover:border-blue-500 focus:border-blue-300 hover:text-blue-500 focus:text-blue-300") 
       | #{text}
   else if type == 'tertiary'
-    a(href="#", class="w-full hover:bg-gold-100 focus:bg-gold-200 md:w-fit block px-3 py-3 text-sm text-center text-black font-bold bg-gold-200 border border-gold-200 rounded-lg") 
+    a(href="https://www.abacum.ai/demo", class="block w-full px-3 py-3 text-sm font-bold text-center text-black border rounded-lg hover:bg-gold-100 focus:bg-gold-200 md:w-fit bg-gold-200 border-gold-200") 
       | #{text}
