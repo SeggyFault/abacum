@@ -4,7 +4,7 @@ include ../button.pug
 
 section(class="flex flex-col items-center text-center mx-auto px-[.625rem] py-5 lg:py-10 xl:py-[60px] bg-[#ebf8ff]") 
   +section-header("Automated FP&A starts with direct integrations", "Abacum fits into any workflow and connects with any business critical system your company uses.")
-  div(class="grid grid-cols-1 gap-5 w-full max-w-7xl sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-10 mt-12")
+  div(class="grid w-full grid-cols-1 gap-5 mt-12 mb-10 max-w-7xl sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4")
     +card('../src/static/images/salesforce.webp', 'Salesforce', 'block')
     +card('../src/static/images/netsuite.webp', 'Netsuite')
     +card('../src/static/images/google-sheet.webp', 'Google Sheets')
@@ -13,4 +13,4 @@ section(class="flex flex-col items-center text-center mx-auto px-[.625rem] py-5 
     +card('../src/static/images/xero.webp', 'Xero', 'hidden sm:flex')
     +card('../src/static/images/snowflake.webp', 'Snowflake', 'hidden lg:flex')
     +card('../src/static/images/personio.webp', 'Personio', 'hidden lg:flex')
-  +button('primary', 'Explore more integrations', 'py-3 px-4 text-base')
+  +button('primary', 'Explore more integrations', 'py-3 px-4 text-base', 'https://www.abacum.ai/integrations')
