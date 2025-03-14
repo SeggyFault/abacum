@@ -12,10 +12,10 @@
 ✅ TailwindCSS integration – Utility-first styling for rapid development  
 ✅ Build & Watch modes – Easily compile templates and styles  
 
-🔗 Live Demo  
+## 🔗 Live Demo  
 Not available since the design was recently changed
 
-👤 Author  
+## 👤 Author  
 Oleksandra Masiukevych - [LinkedIn](https://www.linkedin.com/in/omasiukevych)
 
 
