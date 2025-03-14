@@ -1,8 +1,8 @@
 include ./button.pug
 
-header#header.sticky.top-0.w-full.flex.justify-between
-  img(class="logo" src="../src/static/images/logo.svg" alt="abacum logo")
-  // [Hidden] Desktop Nav START
+header#header.w-full.h-auto.py-2.flex.justify-between.container.mx-auto
+  a(href="https://www.abacum.ai/").flex.justify-center.items-center
+    img(class="logo" src="../src/static/images/logo.svg" alt="abacum logo" width="113px")
   nav.header__nav--desktop
     ul.header__nav__list.flex.gap-2
       li.header__nav__item
@@ -14,13 +14,13 @@ header#header.sticky.top-0.w-full.flex.justify-between
             a.header__sub-nav__link.cursor-pointer(href="#") Reporting
           li.header__sub-nav__item 
             a.header__sub-nav__link.cursor-pointer(href="#") Planning
-      li.header__nav__item
-        a.header__nav__link.cursor-pointer(href="#") Integrations
-      li.header__nav__item
-        a.header__nav__link.cursor-pointer(href="#") Customers
-      li.header__nav__item
-        a.header__nav__link.cursor-pointer(href="#") Plans
-      li.header__nav__item
+      li.header__nav__item.px-4.py-3.gap-1
+        a.header__nav__link.cursor-pointer(href="https://www.abacum.ai/integrations") Integrations
+      li.header__nav__item.px-4.py-3.gap-1
+        a.header__nav__link.cursor-pointer(href="https://www.abacum.ai/customers") Customers
+      li.header__nav__item.px-4.py-3.gap-1
+        a.header__nav__link.cursor-pointer(href="https://www.abacum.ai/plans") Plans
+      li.header__nav__item.px-4.py-3.gap-1
         a(href="#").header__nav__link.flex.items-center Resources
           svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4")
             path(stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5")
@@ -35,7 +35,7 @@ header#header.sticky.top-0.w-full.flex.justify-between
             a.header__sub-nav__link.cursor-pointer(href="#") Webinars
           li.header__sub-nav__item 
             a.header__sub-nav__link.cursor-pointer(href="#") Interviews
-      li.header__nav__item
+      li.header__nav__item.px-4.py-3.gap-1
         a(href="#").header__nav__link.flex.items-center Company
           svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4")
             path(stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5")
@@ -44,11 +44,9 @@ header#header.sticky.top-0.w-full.flex.justify-between
             a.header__sub-nav__link.cursor-pointer(href="#") About
           li.header__sub-nav__item 
             a.header__sub-nav__link.cursor-pointer(href="#") Careers
-  // [Hidden] Desktop Nav END
-  div.btn-group
-    +button('secondary')
-    // [Hidden] Desktop Login Btn END
-    +button('primary', 'Ciao')
+  div.btn-group.flex.items-center.gap-2
+    +button('secondary', 'Login', '', 'https://app.abacum.io/app/login?__hstc=118971862.82524cd67823d1abc874c9d6eeab78c4.1741967441796.1741967441796.1741967441796.1&__hssc=118971862.12.1741967441796&__hsfp=2596353879')
+    +button('primary', 'Request demo', '', 'https://www.abacum.ai/demo')
     // Mobile nav
     a.hidden(href="#")
       svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6")
