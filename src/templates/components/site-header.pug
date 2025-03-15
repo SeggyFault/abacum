@@ -1,12 +1,13 @@
 include ./button.pug
 
-header#header.w-full.h-auto.py-2.flex.justify-between.container.mx-auto
-  a(href="https://www.abacum.ai/").flex.justify-center.items-center
-    img(class="logo" src="../src/static/images/logo.svg" alt="abacum logo" width="113px")
-  nav.header__nav--desktop
-    ul.header__nav__list.flex.gap-2
+header#header(class="container flex items-center justify-between flex-shrink-0 w-full h-auto py-2 mx-auto")
+  a(href="https://www.abacum.ai/").flex.justify-center.items-center.px-2
+    img(class="logo w-[160px]" src="../src/static/images/logo.svg" alt="abacum logo")
+  
+  nav.header__nav--desktop(class="hidden lg:flex")
+    ul.header__nav__list.flex(class="lg:gap-2")
       li.header__nav__item
-        a(href="#" onclick="toggleMenu(event)" data-target="product").header__nav__link.flex.items-center.px-4.py-3.gap-1 Product 
+        a(href="#" onclick="toggleMenu(event)" data-target="product").header__nav__link.flex.items-center.py-3.gap-1.text-base Product 
           svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4")
             path(stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5")
         ul#product.header__sub-nav__list.absolute.p-4.shadow-md.border.border-neutral-200.bg-neutral-100.rounded-lg.z-50.invisible
@@ -14,14 +15,14 @@ header#header.w-full.h-auto.py-2.flex.justify-between.container.mx-auto
             a.header__sub-nav__link.cursor-pointer(href="#") Reporting
           li.header__sub-nav__item.py-2 
             a.header__sub-nav__link.cursor-pointer(href="#") Planning
-      li.header__nav__item.px-4.py-3.gap-1
-        a.header__nav__link.cursor-pointer(href="https://www.abacum.ai/integrations") Integrations
-      li.header__nav__item.px-4.py-3.gap-1
-        a.header__nav__link.cursor-pointer(href="https://www.abacum.ai/customers") Customers
-      li.header__nav__item.px-4.py-3.gap-1
-        a.header__nav__link.cursor-pointer(href="https://www.abacum.ai/plans") Plans
-      li.header__nav__item.px-4.py-3.gap-1
-        a(href="#" onclick="toggleMenu(event)" data-target="resources").header__nav__link.flex.items-center.gap-1 Resources
+      li.header__nav__item.py-3.gap-1
+        a.header__nav__link.cursor-pointer(href="https://www.abacum.ai/integrations").text-base Integrations
+      li.header__nav__item.py-3.gap-1
+        a.header__nav__link.cursor-pointer(href="https://www.abacum.ai/customers").text-base Customers
+      li.header__nav__item.py-3.gap-1
+        a.header__nav__link.cursor-pointer(href="https://www.abacum.ai/plans").text-base Plans
+      li.header__nav__item.py-3.gap-1
+        a(href="#" onclick="toggleMenu(event)" data-target="resources").header__nav__link.flex.items-center.gap-1.text-base Resources
           svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4")
             path(stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5")
         ul#resources.header__sub-nav__list.absolute.p-4.shadow-md.border.border-neutral-200.bg-neutral-100.rounded-lg.z-50.invisible
@@ -35,8 +36,8 @@ header#header.w-full.h-auto.py-2.flex.justify-between.container.mx-auto
             a.header__sub-nav__link.cursor-pointer(href="#") Webinars
           li.header__sub-nav__item.py-2 
             a.header__sub-nav__link.cursor-pointer(href="#") Interviews
-      li.header__nav__item.px-4.py-3.gap-1
-        a(href="#" onclick="toggleMenu(event)" data-target="company").header__nav__link.flex.items-center.gap-1 Company
+      li.header__nav__item.py-3.gap-1
+        a(href="#" onclick="toggleMenu(event)" data-target="company").header__nav__link.flex.items-center.gap-1.text-base Company
           svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4")
             path(stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5")
         ul#company.header__sub-nav__list.absolute.p-4.shadow-md.border.border-neutral-200.bg-neutral-100.rounded-lg.z-50.invisible
@@ -48,8 +49,8 @@ header#header.w-full.h-auto.py-2.flex.justify-between.container.mx-auto
     +button('secondary', 'Login', '', 'https://app.abacum.io/app/login?__hstc=118971862.82524cd67823d1abc874c9d6eeab78c4.1741967441796.1741967441796.1741967441796.1&__hssc=118971862.12.1741967441796&__hsfp=2596353879')
     +button('primary', 'Request demo', '', 'https://www.abacum.ai/demo')
     // Mobile nav
-    a.hidden(href="#")
-      svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6")
+    button.header__nav--mobile(class="lg:hidden")
+      svg(xmlns="http://www.w3.org/2000/svg", fill="none", viewBox="0 0 24 24", stroke-width="1.5", stroke="currentColor" class="w-6 h-6")
         path(stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5")
   script.
     function toggleMenu(event) {
