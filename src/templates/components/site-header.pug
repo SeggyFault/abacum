@@ -7,14 +7,14 @@ header#header(class="container flex items-center justify-between flex-shrink-0 w
   nav.header__nav--desktop(class="hidden lg:flex")
     ul.header__nav__list.flex(class="lg:gap-2")
       li.header__nav__item
-        a(href="#" onclick="toggleMenu(event)" data-target="product").header__nav__link.flex.items-center.py-3.gap-1.text-base Product 
+        a(href="https://www.abacum.ai/product" onclick="toggleMenu(event)" data-target="product").header__nav__link.flex.items-center.py-3.gap-1.text-base Product 
           svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4")
             path(stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5")
         ul#product.header__sub-nav__list.absolute.p-4.shadow-md.border.border-neutral-200.bg-neutral-100.rounded-lg.z-50.invisible
           li.header__sub-nav__item.py-2 
-            a.header__sub-nav__link.cursor-pointer(href="#") Reporting
+            a.header__sub-nav__link.cursor-pointer(href="https://www.abacum.ai/reporting") Reporting
           li.header__sub-nav__item.py-2 
-            a.header__sub-nav__link.cursor-pointer(href="#") Planning
+            a.header__sub-nav__link.cursor-pointer(href="https://www.abacum.ai/planning") Planning
       li.header__nav__item.py-3.gap-1
         a.header__nav__link.cursor-pointer(href="https://www.abacum.ai/integrations").text-base Integrations
       li.header__nav__item.py-3.gap-1
@@ -22,37 +22,64 @@ header#header(class="container flex items-center justify-between flex-shrink-0 w
       li.header__nav__item.py-3.gap-1
         a.header__nav__link.cursor-pointer(href="https://www.abacum.ai/plans").text-base Plans
       li.header__nav__item.py-3.gap-1
-        a(href="#" onclick="toggleMenu(event)" data-target="resources").header__nav__link.flex.items-center.gap-1.text-base Resources
+        a(href="https://www.abacum.ai/resources" onclick="toggleMenu(event)" data-target="resources").header__nav__link.flex.items-center.gap-1.text-base Resources
           svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4")
             path(stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5")
         ul#resources.header__sub-nav__list.absolute.p-4.shadow-md.border.border-neutral-200.bg-neutral-100.rounded-lg.z-50.invisible
           li.header__sub-nav__item.py-2 
-            a.header__sub-nav__link.cursor-pointer(href="#") What is FP&A?
+            a.header__sub-nav__link.cursor-pointer(href="https://www.abacum.ai/fp&a") What is FP&A?
           li.header__sub-nav__item.py-2
-            a.header__sub-nav__link.cursor-pointer(href="#") Blog
+            a.header__sub-nav__link.cursor-pointer(href="https://www.abacum.ai/blog") Blog
           li.header__sub-nav__item.py-2 
-            a.header__sub-nav__link.cursor-pointer(href="#") Ebooks
+            a.header__sub-nav__link.cursor-pointer(href="https://www.abacum.ai/ebooks") Ebooks
           li.header__sub-nav__item.py-2 
-            a.header__sub-nav__link.cursor-pointer(href="#") Webinars
+            a.header__sub-nav__link.cursor-pointer(href="https://www.abacum.ai/webinars") Webinars
           li.header__sub-nav__item.py-2 
-            a.header__sub-nav__link.cursor-pointer(href="#") Interviews
+            a.header__sub-nav__link.cursor-pointer(href="https://www.abacum.ai/interviews") Interviews
       li.header__nav__item.py-3.gap-1
-        a(href="#" onclick="toggleMenu(event)" data-target="company").header__nav__link.flex.items-center.gap-1.text-base Company
+        a(href="https://www.abacum.ai/company" onclick="toggleMenu(event)" data-target="company").header__nav__link.flex.items-center.gap-1.text-base Company
           svg(xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4")
             path(stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5")
         ul#company.header__sub-nav__list.absolute.p-4.shadow-md.border.border-neutral-200.bg-neutral-100.rounded-lg.z-50.invisible
           li.header__sub-nav__item.py-2
-            a.header__sub-nav__link.cursor-pointer(href="#") About
+            a.header__sub-nav__link.cursor-pointer(href="https://www.abacum.ai/about") About
           li.header__sub-nav__item.py-2
-            a.header__sub-nav__link.cursor-pointer(href="#") Careers
+            a.header__sub-nav__link.cursor-pointer(href="https://www.abacum.ai/careers") Careers
   div.btn-group.flex.items-center.gap-2
     +button('secondary', 'Login', '', 'https://app.abacum.io/app/login?__hstc=118971862.82524cd67823d1abc874c9d6eeab78c4.1741967441796.1741967441796.1741967441796.1&__hssc=118971862.12.1741967441796&__hsfp=2596353879')
     +button('primary', 'Request demo', '', 'https://www.abacum.ai/demo')
     // Mobile nav
-    button.header__nav--mobile(class="lg:hidden")
+    button#mobile-menu-btn.header__nav--mobile(class="lg:hidden" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMobileMenu()")
       svg(xmlns="http://www.w3.org/2000/svg", fill="none", viewBox="0 0 24 24", stroke-width="1.5", stroke="currentColor" class="w-6 h-6")
         path(stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5")
+    div#mobile-menu.hidden.fixed.top-0.left-0.w-screen.h-screen.bg-neutral-100.z-60.flex.flex-col.items-center.justify-center
+      button.absolute.top-4.right-4.text-3xl(aria-label="Close menu" onclick="toggleMobileMenu()") ✕
+      ul.flex.flex-col.text-xl.gap-8
+        li 
+          a(href="https://www.abacum.ai/product") Product
+        li 
+          a(href="https://www.abacum.ai/integrations") Integrations 
+        li 
+          a(href="https://www.abacum.ai/customers") Customers 
+        li 
+          a(href="https://www.abacum.ai/plans") Plans 
+        li 
+          a(href="https://www.abacum.ai/resources") Resources 
+        li 
+          a(href="https://www.abacum.ai/company") Company
+
   script.
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobile-menu");
+      const btn = document.getElementById("mobile-menu-btn");
+
+      const isExpanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", !isExpanded);
+      menu.classList.toggle("hidden");
+
+      document.body.style.overflow = isExpanded ? "auto" : "hidden";
+    }
+    
     function toggleMenu(event) {
       event.preventDefault();
       const targetId = event.currentTarget.getAttribute("data-target");
